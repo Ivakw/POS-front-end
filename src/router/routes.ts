@@ -1,7 +1,8 @@
 import login from './../auth/login.vue';
 import dashboard from './../pages/dashboard.vue';
+import { RouteRecordRaw } from 'vue-router';
 
-const routes = [
+const routes: Array<RouteRecordRaw> = [
    {  
         path: '/', 
         name:'login',
