@@ -12,14 +12,16 @@
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "bootstrap-vue": "^2.23.1",
+    "pinia": "^2.1.7",
     "primeicons": "^7.0.0",
     "primevue": "^3.52.0",
     "vue": "^3.4.27",
     "vue-router": "^4.3.3",
-    "vuex": "^4.0.2",
+    "vuex": "4.0.2",
     "vuex-module-decorators": "^2.0.0"
   },
   "devDependencies": {
+    "@types/node": "^20.14.2",
     "@vitejs/plugin-vue": "^5.0.4",
     "typescript": "^5.4.5",
     "vite": "^5.2.0",
