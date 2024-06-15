@@ -36,12 +36,12 @@ import Button from 'primevue/button';
 import InputText from 'primevue/inputtext';
 import {loginRequest, changeType } from './../services/authService';
 import './../Interfaces/loginParams';
-import { useStore } from "vuex";
+
 import { useRouter } from 'vue-router';
-const store = useStore();
+import AuthModule  from './../store/modules/AuthModule';
 const router = useRouter();
 
-
+const store = AuthModule()
 const loginParams = ref<loginParams>({email:'',password:''});
 const error = ref<string>('');
 const iconType = ref<string>('pi pi-eye');

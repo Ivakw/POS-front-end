@@ -2,9 +2,9 @@
 
 import './../Interfaces/loginParams';
 
-const loginRequest = async(loginParams : loginParams,store,router) =>{
+const loginRequest = async(loginParams : loginParams,store:any,router:any) =>{
   try{
-      let result = await store.dispatch('login_Request', loginParams); 
+      let result = await store.login_Request(loginParams); 
 
       if(result.status === 422)
       {
@@ -18,7 +18,7 @@ const loginRequest = async(loginParams : loginParams,store,router) =>{
       localStorage.setItem('token',result.data.token);
       router.push({name:'dashboard'});
       return 'SuccessFully Login';
-  }catch(err){
+  }catch(err:any){
     console.error(err);
     return err;
   }
