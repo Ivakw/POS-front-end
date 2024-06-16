@@ -1,18 +1,30 @@
 import login from './../auth/login.vue';
-import dashboard from './../pages/dashboard.vue';
+import BasicLayout from '../pages/BasicLayout.vue';
+import dashboard from '../components/dashboard.vue';
+import products from './../components/Products.vue'
 import { RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
    {  
-        path: '/', 
+        path: '/login', 
         name:'login',
         component: login 
     },
     {  
-        path: '/dashboard', 
-        name:'dashboard',
-        component: dashboard,
+        path: '/BasicLayout', 
+        name:'BasicLayout',
+        component: BasicLayout,
         meta: { requiresAuth: true },
+        children: [
+            {
+              path: '/dashboard',
+              component: dashboard,
+            },
+            {
+              path: '/products',
+              component: products,
+            },
+          ],
     },
 ]
 
