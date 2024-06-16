@@ -16,7 +16,7 @@ const loginRequest = async(loginParams : loginParams,store:any,router:any) =>{
       }
 
       localStorage.setItem('token',result.data.token);
-      router.push({name:'dashboard'});
+      router.push({path:'/dashboard'});
       return 'SuccessFully Login';
   }catch(err:any){
     console.error(err);
