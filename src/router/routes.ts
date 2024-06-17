@@ -29,7 +29,7 @@ const routes=[
     {
       path: '*',
       name: 'catchAll',
-      component: BasicLayout
+      component: BasicLayout 
    }
 ]
 
