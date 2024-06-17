@@ -6,12 +6,12 @@ import dashboard from '../components/dashboard.vue';
 
 const routes=[
    {  
-        path: '/', 
+        path: '/login', 
         name:'login',
         component: login 
     },
     {  
-        path: '/BasicLayout', 
+        path: '/', 
         name:'BasicLayout',
         component: BasicLayout,
         meta: { requiresAuth: true },
@@ -26,11 +26,6 @@ const routes=[
             // },
           ],
     },
-  //   {
-  //     path: '*',
-  //     name: 'catchAll',
-  //     component: BasicLayout 
-  //  }
 ]
 
 export default routes;
