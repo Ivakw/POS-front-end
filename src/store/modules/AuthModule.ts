@@ -21,8 +21,25 @@ const AuthModule= defineStore('AuthModule',{
                      
                   });
             });
+            
+          },
+          get_user_details(){
+            return new Promise<void>((resolve,reject)=>{
+                  axios.get('/api/user-details').then((response:any)=>{
+          
+                      resolve(response.data);
+                }).catch(({response})=>{
+
+                  if(response.status === 422){
+                    reject(response.data.message);
+                  }else{
+                    reject(response.data);
+                  }
+                   
+                });
+          });
         }
-  }
+      }
 
 });
 

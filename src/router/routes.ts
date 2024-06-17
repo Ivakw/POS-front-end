@@ -1,7 +1,7 @@
 import login from './../auth/login.vue';
 import BasicLayout from '../pages/BasicLayout.vue';
 import dashboard from '../components/dashboard.vue';
-// import products from './../components/Products.vue'
+import products from './../components/Products.vue'
 
 
 const routes=[
@@ -20,10 +20,10 @@ const routes=[
               path: '/dashboard',
               component: dashboard,
             },
-            // {
-            //   path: '/products',
-            //   component: products,
-            // },
+            {
+              path: '/products',
+              component: products,
+            },
           ],
     },
 ]

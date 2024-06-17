@@ -8,7 +8,7 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="#" >
+              <router-link class="nav-link" to="#" v-if="permission.includes('view_users')">
                 Orders
               </router-link>
             </li>
@@ -36,6 +36,25 @@
         </div>
       </nav>
 </template>
+<script setup lang="ts">
+import { ref, computed } from 'vue';
+
+const permission = computed(()=>{
+  let data = localStorage.getItem('userPermissions');
+  console.log();
+ let array = [];
+
+  if(data){
+  let convert = JSON.parse(data);
+   array = convert.map((c)=>{
+    return c.name;
+    });
+    
+  }
+  return array;
+});
+</script>
+
 <style scoped>
 #sidebar {
   height: 100vh;
