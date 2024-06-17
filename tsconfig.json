@@ -23,6 +23,7 @@
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }],
   "types": [
-   "vuex/types"
+   "vuex/types",
+   "@types/vue"
   ]
 }

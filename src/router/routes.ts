@@ -1,10 +1,10 @@
 import login from './../auth/login.vue';
 import BasicLayout from '../pages/BasicLayout.vue';
 import dashboard from '../components/dashboard.vue';
-import products from './../components/Products.vue'
-import { RouteRecordRaw } from 'vue-router';
+// import products from './../components/Products.vue'
 
-const routes: Array<RouteRecordRaw> = [
+
+const routes=[
    {  
         path: '/login', 
         name:'login',
@@ -20,10 +20,10 @@ const routes: Array<RouteRecordRaw> = [
               path: '/dashboard',
               component: dashboard,
             },
-            {
-              path: '/products',
-              component: products,
-            },
+            // {
+            //   path: '/products',
+            //   component: products,
+            // },
           ],
     },
 ]

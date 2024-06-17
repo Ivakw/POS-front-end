@@ -35,7 +35,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue';
-import {loginRequest, changeType } from './../services/authService';
+import {loginRequest } from './../services/authService';
 import './../Interfaces/loginParams';
 
 import { useRouter } from 'vue-router';
@@ -45,17 +45,17 @@ const router = useRouter();
 const store = AuthModule()
 const loginParams = ref<loginParams>({email:'',password:''});
 const error = ref<string>('');
-const iconType = ref<string>('pi pi-eye');
-const passwordType = ref<string>('password');
+// const iconType = ref<string>('pi pi-eye');
+// const passwordType = ref<string>('password');
 
 const handleLogin = async() => {
     let result = await loginRequest(loginParams.value,store,router);
     error.value = result;    
     }
-const passwordTypeChange = () =>{
-     let result =changeType(passwordType.value,iconType.value);
-        passwordType.value = result.passwordType;
-        iconType.value = result.iconType;
-}
+// const passwordTypeChange = () =>{
+//      let result =changeType(passwordType.value,iconType.value);
+//         passwordType.value = result.passwordType;
+//         iconType.value = result.iconType;
+// }
 
 </script>
