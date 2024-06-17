@@ -26,6 +26,11 @@ const routes=[
             // },
           ],
     },
+    {
+      path: '*',
+      name: 'catchAll',
+      component: BasicLayout
+   }
 ]
 
 export default routes;
