@@ -3,34 +3,34 @@
         <div class="position-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="/dashboard">
+              <router-link class="nav-link active" to="/dashboard">
                 Dashboard
-              </a>
+              </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <router-link class="nav-link" to="#" >
                 Orders
-              </a>
+              </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/products">
+              <router-link class="nav-link" to="/products">
                 Products
-              </a>
+                </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <router-link class="nav-link" to="#">
                 Customers
-              </a>
+                </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <router-link class="nav-link" to="#">
                 Reports
-              </a>
+                </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <router-link class="nav-link" to="#">
                 Integrations
-              </a>
+                </router-link>
             </li>
           </ul>
         </div>
