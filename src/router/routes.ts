@@ -6,7 +6,7 @@ import dashboard from '../components/dashboard.vue';
 
 const routes=[
    {  
-        path: '/login', 
+        path: '/', 
         name:'login',
         component: login 
     },
@@ -26,11 +26,11 @@ const routes=[
             // },
           ],
     },
-    {
-      path: '*',
-      name: 'catchAll',
-      component: BasicLayout 
-   }
+  //   {
+  //     path: '*',
+  //     name: 'catchAll',
+  //     component: BasicLayout 
+  //  }
 ]
 
 export default routes;
